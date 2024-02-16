@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const porta = 8080
-const connection = require('./database/Connection')
+const connection = require('./db/Connection')
 
 app.get('/hello', async (req, res) => {
     res.sendStatus(200)
