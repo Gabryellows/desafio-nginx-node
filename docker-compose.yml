@@ -5,6 +5,8 @@ services:
     build: 
       context: ./node-app
     image: gabryellows/app
+    volumes:
+      - ./node-app:/app
     container_name: nodejs
     entrypoint: wait-for db:3306 -t 40 -- npm start
     networks:
